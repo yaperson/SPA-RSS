@@ -1,0 +1,16 @@
+{
+  "name": "spa-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio yanis legrand",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "yanis legrand",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "rss-parser": "^3.12.0"
+  }
+}

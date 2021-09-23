@@ -1,0 +1,27 @@
+{
+    "name": "PWA",
+    "short_name":"app",
+    "start_url":"/index.html",
+    "display":"standalone",
+    "background_color":"white",
+    "theme_color":"white",
+    "orientation":"portrait-primary",
+    "icons":[
+        {
+            "src":"/wwwroot/icons/icon.ico",
+            "type":"image/ico",
+            "sizes":"192x192",
+            "purpose":"any maskable"
+        },
+        {
+            "src":"/wwwroot/icons/icon.png",
+            "type":"image/PNG",
+            "sizes":"512x512"
+        },
+        {
+            "src":"/wwwroot/icons/icon-512.ico",
+            "type":"image/ico",
+            "sizes":"512x512"
+        }
+    ]
+}

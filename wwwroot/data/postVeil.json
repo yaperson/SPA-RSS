@@ -1,0 +1,9 @@
+{
+    "servicesworker":
+    [
+        {
+        "name": "Serviceworker",
+        "description": "Le service workers est comme un proxy programmable qui est dans le navigateur et va intercepter les requêtes qu’il y à entre vos pages et votre serveur, et qui à son propre cache. "
+        }
+    ]
+}
