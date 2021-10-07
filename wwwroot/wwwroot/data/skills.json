@@ -1,0 +1,23 @@
+{
+        "html":
+        [
+            {
+            "name": "html",
+            "progress":"85%"
+            }
+        ],
+        "css":
+        [
+            {
+            "name": "css",
+            "progress":"40%"
+            }
+        ],
+        "javaScript":
+        [
+            {
+            "name": "JavaScript",
+            "progress":"30%"
+            }
+        ]
+}
