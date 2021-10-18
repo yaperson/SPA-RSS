@@ -7,6 +7,6 @@
     - rss-parser
 ## Install
 *installation command*
-. Node.js => npm install
-. express => npm install express
-. rss-parser => npm install rss-parser
+- Node.js => npm install
+- express => npm install express
+- rss-parser => npm install rss-parser
