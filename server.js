@@ -81,7 +81,38 @@ const Parser = require("rss-parser");
 
     // Save the file
     fs.writeFileSync(fileName2 ,JSON.stringify(items2));
+
+    // ----------------------
+    //      RSS N°3         |
+    // ----------------------
+    // Get all the items in the RSS feed
+    const feed3 = await parser.parseURL("https://www.youtube.com/feeds/videos.xml?channel_id=UCnEHCrot2HkySxMTmDPhZyg"); // http://blog.chromium.org/atom.xml
+
+    let items3 = [];
+
+    // Clean up the string and replace reserved characters
+    const fileName3 = `./wwwroot/data/${feed3.title.replace(/\s+/g, "-").replace(/[/\\?%*:|"<>]/g, '').toLowerCase()}.json`;
+
+    if (fs.existsSync(fileName3)) {
+        items3 = require(`./${fileName3}`);
+    }
+
+    // Add the items to the items array
+    await Promise.all(feed3.items.map(async (currentItem3) => {
+
+        // Add a new item if it doesn't already exist
+        if (items3.filter((item3) => isEquivalent(item3, currentItem3)).length <= 0) {
+            items3.push(currentItem3);
+        }
+
+    }));
+
+    // Save the file
+    fs.writeFileSync(fileName3 ,JSON.stringify(items3));
+
 })();
+
+
 
 function isEquivalent(a, b) {
     // Create arrays of property names

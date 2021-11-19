@@ -32,12 +32,17 @@ export default class {
             itemLink.setAttribute('href', item.link)
             itemLink.classList.add('Post__description')
             
+            let itemDate = document.createElement('span')
+            itemDate.classList.add('Post__description')
+
             itemElement.append(itemTitleElement)
             itemElement.append(itemLink)
+            itemElement.append(itemDate)
 
             itemTitleElement.innerHTML = item.title || 'JavaScript'
             itemLink.innerHTML = item.link || 'index.html'
-
+            itemDate.innerHTML = item.pubDate.substr(0, 10) || '33/13/2058' 
+            
             itemsElement.append(itemElement)
         }
 

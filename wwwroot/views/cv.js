@@ -66,7 +66,7 @@ export default class {
                 experiences.innerHTML = item.experiences || '[NO EXPERIENCES]'
                 // images.innerHTML = '<img src="/images/image0.png" class="Cv__image-me">'
                 // animImages.innerHTML = '<img src="/images/guitare.png" class="Cv__image-guitare">'
-
+                console.log(item.experiences)
                 itemsElement.append(itemElement)
         }
     }

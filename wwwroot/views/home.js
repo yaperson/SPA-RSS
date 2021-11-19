@@ -71,21 +71,21 @@ export default class {
         return [buttonCvElement, buttonHomeElement, buttonSkillsElement]
     }
 
+    
     #item_click_handler() {
-
-        let active = 0
-
-        if (active = 0){
-        document.body.style.background = '#ffffff'
-        document.body.style.color = '#2e2e2e'
-        active = 1
+        let active = false
+        let body = document.getElementById("body")
+        if (active = true){
+        body.style.background = '#ffffff'
+        body.style.color = '#2e2e2e'
+        active = false
         console.log(active) 
         }
-        if(active = 1){
-        document.body.style.background = '#2e2e2e'
-        document.body.style.color = '#ffffff'
+        if(active = false){
+        body.style.background = '#2e2e2e'
+        body.style.color = '#ffffff'
         console.log(active)
-        active = 0
+        active = true
         }
     }
 
