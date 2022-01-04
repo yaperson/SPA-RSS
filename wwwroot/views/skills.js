@@ -3,7 +3,7 @@ import InfoService from '/services/InfoSkills.js'
 export default class {
     async header() {
         let titleElement = document.createElement('div')
-        titleElement.innerText = "Yanis Legrand"
+        titleElement.innerText = "Projets"
         return titleElement;
     }
 

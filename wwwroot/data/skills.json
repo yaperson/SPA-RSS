@@ -1,23 +1,17 @@
-{
-        "html":
-        [
-            {
-            "name": "html",
-            "progress":"85%"
-            }
-        ],
-        "css":
-        [
-            {
-            "name": "css",
-            "progress":"40%"
-            }
-        ],
-        "javaScript":
-        [
-            {
-            "name": "JavaScript",
-            "progress":"30%"
-            }
-        ]
-}
+[
+    {
+    "name": "Flux RSS",
+    "url": "/",
+    "progress":"85%"
+    },
+    {
+    "name": "WeekSong",
+    "url": "/",
+    "progress":"40%"
+    },
+    {
+    "name": "NoteList",
+    "url": "/",
+    "progress":"30%"
+    }
+]

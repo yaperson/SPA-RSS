@@ -1,7 +1,7 @@
 {
-    "name": "PWA",
-    "short_name":"app",
-    "start_url":"/index.html",
+    "name": "Flux RSS PWA Yanis Legrand",
+    "short_name":"Flux RSS",
+    "start_url":"https://veille-yanislegrand.alwaysdata.net",
     "display":"standalone",
     "background_color":"white",
     "theme_color":"white",

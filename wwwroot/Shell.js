@@ -21,7 +21,7 @@ let Shell = class extends HTMLElement{
 
         function createStyle(){
             let styleHtml = document.createElement('link')
-            styleHtml.setAttribute('href', '/css/shell.css')
+            styleHtml.setAttribute('href', 'css/shell.css')
             styleHtml.setAttribute('rel', 'stylesheet')
             shadow.append(styleHtml)
         }
@@ -112,7 +112,7 @@ window.customElements.define('rp-shell', Shell)
 export default Shell
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/serviceWorker.js', { scope: '/' }).then(function(register) {
+    navigator.serviceWorker.register('./serviceWorker.js', { scope: '/SPA-RSS/' }).then(function(register) {
       console.log('serviceWorker installer ' + register.scope);
     }).catch(function(error) {
       console.log('Registration failed with ' + error);

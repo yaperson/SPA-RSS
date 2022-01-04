@@ -1,9 +1,9 @@
-import InfoService from '/services/rssFlux.js'
+import InfoService from '/services/InfoVeil.js'
 
 export default class {
     async header() {
         let titleElement = document.createElement('div')
-        titleElement.innerText = "FLUX RSS"
+        titleElement.innerText = "HOME"
         return titleElement;
     }
 
@@ -12,7 +12,7 @@ export default class {
         itemsElement.classList.add('home')
         let data = await InfoService.getInfo()
         
-        for (let item of data) {
+        for (let item of data.fluxList) {
             createPostVeil.call(this, item)
         }
 
@@ -28,20 +28,16 @@ export default class {
             let itemTitleElement = document.createElement('div')
             itemTitleElement.classList.add('Post__title')
 
-            let itemLink = document.createElement('a')
-            itemLink.setAttribute("href", item.link )
-            itemLink.classList.add('Post__description')
-
-            let itemPubDate = document.createElement('span')
-            itemPubDate.classList.add('Post__description')
+            let itemDescription = document.createElement('span')
+            itemDescription.classList.add('Post__description')
             
             itemElement.append(itemTitleElement)
-            itemElement.append(itemLink)
-            itemElement.append(itemPubDate)
+            itemElement.append(itemDescription)
 
-            itemTitleElement.innerHTML = item.title || 'JavaScript'
-            itemLink.innerHTML = item.link || 'index.html'
-            itemPubDate.innerHTML = item.pubDate || 'index.html'
+            itemTitleElement.innerHTML = item.name || 'JavaScript'
+            itemDescription.innerHTML = item.description || 'index.html'
+
+            itemElement.addEventListener('click', ()=>this.shell.gotoView('/views/'+item.id+'.js'))
 
             itemsElement.append(itemElement)
         }
@@ -76,21 +72,14 @@ export default class {
     }
 
     #item_click_handler() {
+        // let home = document.body.getElementsByClassName('home')
+        // home[0].classList.toggle("darkmode");
 
-        let active = 0
+        let body = document.body
+        // let html = document.getElementsByClassName('html')
+        body.classList.toggle("darkmode");
+        // html[0].classList.toggle("darkmode");
 
-        if (active = 0){
-        document.body.style.background = '#ffffff'
-        document.body.style.color = '#2e2e2e'
-        active = 1
-        console.log(active) 
-        }
-        else{
-        document.body.style.background = '#2e2e2e'
-        document.body.style.color = '#ffffff'
-        console.log(active)
-        active = 0
-        }
     }
 
     #buttonSkillsElement(){
@@ -103,5 +92,10 @@ export default class {
 
     #buttonHomeElement(){
         this.shell.gotoView('/views/home.js')
+    }
+
+    #buttonFluxElement(item){
+        this.shell.gotoView('/views/'+item.id+'.js')
+        console.log('/views/'+item.id+'.js')
     }
 }

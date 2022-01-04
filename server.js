@@ -1,16 +1,25 @@
 const express = require('express')
 const path = require('path')
-const host = 'localhost'
-const port = 5052
-
+const host = '127.0.0.1' //'192.168.1.8' //yanis-projet.alwaysdata.net
+const port = 5051
 let app = express() 
 
-app.use(express.static(path.resolve(__dirname, "wwwroot")));
+ app.use(express.static(path.resolve(__dirname, "wwwroot")));
+//app.use( '/home' ,express.static(path.resolve(__dirname, "wwwroot")));
 
 app.listen(port, host, () => {
-    console.log(`Server is runing on http://${host}:${port}`)
+    console.log(`Server is runing on http://${host}:${port}`);
 })
-/******************************************************************** */
+
+// app.listen(
+//     process.env.PORT,
+//     process.env.IP,
+//     ()=>{
+//         console.log(`Server is runing on http://${host}:${port}`);
+//         //console.log(`Server is runing on http://${process.env.IP}:${process.env.PORT}`);
+//     }
+// );
+/*********************************************************************/
 // Import dependencies
 const fs = require("fs");
 const Parser = require("rss-parser");
@@ -21,12 +30,12 @@ const Parser = require("rss-parser");
     const parser = new Parser();
 
     // Get all the items in the RSS feed
-    const feed = await parser.parseURL("https://www.youtube.com/feeds/videos.xml?channel_id=GoogleChromeDevelopers"); // https://www.reddit.com/.rss
+    const feed = await parser.parseURL("https://www.google.fr/alerts/feeds/15619974748131115017/8380039576618842492"); // PWA
 
     let items = [];
 
     // Clean up the string and replace reserved characters
-    const fileName = `${feed.title.replace(/\s+/g, "-").replace(/[/\\?%*:|"<>]/g, '').toLowerCase()}.json`;
+    const fileName = `./wwwroot/data/${feed.title.replace(/\s+/g, "-").replace(/[/\\?%*:|"<>]/g, '').toLowerCase()}.json`;
 
     if (fs.existsSync(fileName)) {
         items = require(`./${fileName}`);
@@ -43,8 +52,36 @@ const Parser = require("rss-parser");
     }));
 
     // Save the file
-    fs.writeFileSync(fileName, JSON.stringify(items));
+    fs.writeFileSync(fileName ,JSON.stringify(items));
 
+
+    // ----------------------
+    //      RSS N°2         |
+    // ----------------------
+    // Get all the items in the RSS feed
+    const feed2 = await parser.parseURL("https://www.youtube.com/feeds/videos.xml?channel_id=UCnEHCrot2HkySxMTmDPhZyg"); // defend intelligence
+
+    let items2 = [];
+
+    // Clean up the string and replace reserved characters
+    const fileName2 = `./wwwroot/data/${feed2.title.replace(/\s+/g, "-").replace(/[/\\?%*:|"<>]/g, '').toLowerCase()}.json`;
+
+    if (fs.existsSync(fileName2)) {
+        items2 = require(`./${fileName2}`);
+    }
+
+    // Add the items to the items array
+    await Promise.all(feed2.items.map(async (currentItem2) => {
+
+        // Add a new item if it doesn't already exist
+        if (items2.filter((item2) => isEquivalent(item2, currentItem2)).length <= 0) {
+            items2.push(currentItem2);
+        }
+
+    }));
+
+    // Save the file
+    fs.writeFileSync(fileName2 ,JSON.stringify(items2));
 })();
 
 function isEquivalent(a, b) {

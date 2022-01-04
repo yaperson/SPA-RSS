@@ -53,7 +53,7 @@ export default class {
                 itemElement.append(surname)
                 itemElement.append(age)
                 itemElement.append(images)
-                itemElement.append(animImages)
+               // itemElement.append(animImages)
                 itemElement.append(phone)
                 itemElement.append(mail)
                 itemElement.append(experiences)
@@ -63,9 +63,9 @@ export default class {
                 age.innerHTML = item.age + ' ans' || '[NO AGE]'
                 phone.innerHTML = item.phone || '[NO PHONE]'
                 mail.innerHTML = item.mail || '[NO MAIL]'
-                experiences.innerHTML = item.experiences || '[NO EXPERIENCES]'
-                images.innerHTML = '<img src="/images/image0.png" class="Cv__image-me">'
-                animImages.innerHTML = '<img src="/images/guitare.png" class="Cv__image-guitare">'
+                //experiences.innerHTML = item.entreprise || '[NO EXPERIENCES]'
+                images.innerHTML = '<img src="/images/CV-YanisLegrand.pdf" class="Cv__image-me">'
+               // animImages.innerHTML = '<img src="/images/guitare.png" class="Cv__image-guitare">'
 
                 itemsElement.append(itemElement)
         }

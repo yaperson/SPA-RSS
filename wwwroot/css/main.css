@@ -1,16 +1,17 @@
 :root{
-    --text-color: #2e2e2e;
-    --separation-color: #dddddd;
-    --background-navigation-color: #f8f8f8;
-    --background-navigation-color-dark: #242424; /*#f8f8f8*/
+  --text-color-dark: #949494;
+  --text-color: #2e2e2e;
+  --separation-color: #dddddd;
+  --background-navigation-color: #f8f8f8;
+  --background-navigation-color-dark: #242424; /*#f8f8f8*/
 
 
-    --report-new-color:var(--separation-color);
-    --report-active-color:#ded13b;
-    --report-closed-color:rgb(151, 204, 71);
-    --report-no-color:#de3b3b;
-    --report-status-width: 0.5em; 
-    --report-padding: 0.5em;    
+  --report-new-color:var(--separation-color);
+  --report-active-color:#ded13b;
+  --report-closed-color:rgb(151, 204, 71);
+  --report-no-color:#de3b3b;
+  --report-status-width: 0.5em; 
+  --report-padding: 0.5em;    
 }
   
 html, body, rp-shell {
@@ -21,9 +22,9 @@ html, body, rp-shell {
   right: 0;
   bottom: 0;
   font-family: sans-serif;
-  color: var(--text-color);
   overflow: hidden;
   margin: 0;
+  transition: 0.2s;
 }
 
 h1{
@@ -34,7 +35,7 @@ h1{
 }
 
 .Post__description{
-  display: grid;
+  display: flex;
   gap:1em;
   padding: 1em;
 }
@@ -45,10 +46,17 @@ h1{
     padding: var(--report-padding);
     border:solid 1px var(--separation-color);
     cursor: pointer;
+    max-width: 100%;
 }
 
 .Post__title{
   font-size:2em;
+  max-width: 100%;
+}
+
+.Post__description {
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 
@@ -77,6 +85,9 @@ h1{
     max-height: 3em;
 }
 /* skills */
+.SkillsList{
+  margin: 10px;
+}
 .Skill__bar{
   height: 6px;
   background-color: #2e2e2e;
@@ -128,4 +139,34 @@ h1{
     bottom: 0;
     transition: 1s;
   }
+}
+
+.darkmode {
+  transition: 0.2s;
+  background: var(--background-navigation-color-dark);
+  color: var(--text-color-dark);
+}
+
+.toogleDark{
+  color: rgb(105, 105, 105);
+  border-color: rgb(40, 113, 197);
+  transition: .2s;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 1em;
+  padding: 1em 2em;
+}
+.toogleDark:hover{
+  transition: .2s;
+  border-color: rgb(40, 113, 197);
+  box-shadow: inset 9em 0 0 0 rgb(40, 113, 197);
+  color: #dddddd;
+}
+.toogleDark:active{
+  border: 5px solid;
+  border-color: rgb(40, 113, 197);
+  color: #dddddd;
+  transition: .2s;   
 }

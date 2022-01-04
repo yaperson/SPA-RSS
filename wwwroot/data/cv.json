@@ -7,21 +7,11 @@
         "age":"18",
         "phone":"07 81 36 40 05",
         "mail":"yanis.legrand.1@gmail.com",
+        "entreprise":"Hopicile",
+        "poste":"Accueil clients",
+        "dates":"juin 2020",
+        "description":"Accueil des clients en magasin de matériel medicale."
 
-        "experiences":[
-            {
-                "entreprise":"Hopicile",
-                "poste":"Accueil clients",
-                "dates":"juin 2020",
-                "description":"Accueil des clients en magasin de matériel medicale."
-            },  
-            {
-                "entreprise":"Théatre des Jacobin Dinan",
-                "poste":"technicien audiovisuel",
-                "dates":"Janvier 2020",
-                "description":"Installation et entretien du matériel audiovisuel."
-            }  
-        ]
         }
     ]
 }
