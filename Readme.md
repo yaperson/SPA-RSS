@@ -1,5 +1,5 @@
 # App RSVeil
-*How to use*
+*Objectif PWA*
 ## Tech :
 - Node.js
     - express
