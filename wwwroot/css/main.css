@@ -85,6 +85,19 @@ h1{
     max-height: 3em;
 }
 /* skills */
+.skillsJs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.Skills__title {
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+}
+.Skills__title:active {
+  text-decoration: none;
+}
+
 .SkillsList{
   margin: 10px;
 }

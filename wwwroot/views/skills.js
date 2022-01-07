@@ -11,11 +11,13 @@ export default class {
          let itemsElement = document.createElement('div')
          itemsElement.classList.add('SkillsList')
          let data = await InfoService.getInfo()
-        
-         for (let item of data.html) {
+
+         createText()
+         
+         for (let item of data) {
             createSkillsItem.call(this, item)
          }
-
+/*
          for (let item of data.css) {
             createSkillsItem.call(this, item)
          }
@@ -23,17 +25,27 @@ export default class {
          for (let item of data.javaScript) {
             createSkillsItem.call(this, item)
          }
-
+*/
          return itemsElement
 
         //---
+
+         function createText() {
+            let itemElement = document.createElement('p')
+            itemElement.classList.add('Skills_description')
+            
+            itemElement.innerText = "Voici mes différents projets du moment et leurs avancement :)"
+
+            itemsElement.append(itemElement)
+        }
 
 
         function createSkillsItem(item) {
             let itemElement = document.createElement('div')
             itemElement.classList.add('skillsJs')
 
-                let itemTitleElement = document.createElement('div')
+                let itemTitleElement = document.createElement('a')
+                itemTitleElement.setAttribute('href', item.url)
                 itemTitleElement.classList.add('Skills__title')
 
                 let skillBar = document.createElement('div')

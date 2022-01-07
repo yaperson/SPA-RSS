@@ -1,17 +1,17 @@
 [
     {
     "name": "Flux RSS",
-    "url": "/",
+    "url": "https://veille-yanislegrand.alwaysdata.net/",
     "progress":"85%"
     },
     {
     "name": "WeekSong",
-    "url": "/",
-    "progress":"40%"
+    "url": "https://yaperson.alwaysdata.net/musique/",
+    "progress":"60%"
     },
     {
     "name": "NoteList",
     "url": "/",
-    "progress":"30%"
+    "progress":"10%"
     }
 ]
