@@ -9,7 +9,7 @@ export default class {
 
     async content() {
         let itemsElement = document.createElement('div')
-        itemsElement.classList.add('cv')
+        itemsElement.classList.add('cv__content')
     
         let data = await InfoService.getInfo()
         
@@ -49,14 +49,14 @@ export default class {
                 let animImages = document.createElement('div')
                 animImages.classList.add('Cv__animImages')
 
-                itemElement.append(name)
-                itemElement.append(surname)
-                itemElement.append(age)
+                //itemElement.append(name)
+                //itemElement.append(surname)
+                //itemElement.append(age)
                 itemElement.append(images)
-               // itemElement.append(animImages)
-                itemElement.append(phone)
-                itemElement.append(mail)
-                itemElement.append(experiences)
+                //itemElement.append(animImages)
+                //itemElement.append(phone)
+                //itemElement.append(mail)
+                //itemElement.append(experiences)
 
                 name.innerHTML = item.name || '[NO NAME]'
                 surname.innerHTML = item.surname || '[NO SURNAME]'
@@ -64,8 +64,7 @@ export default class {
                 phone.innerHTML = item.phone || '[NO PHONE]'
                 mail.innerHTML = item.mail || '[NO MAIL]'
                 //experiences.innerHTML = item.entreprise || '[NO EXPERIENCES]'
-                images.innerHTML = '<img src="/images/CV-YanisLegrand.pdf" class="Cv__image-me">'
-               // animImages.innerHTML = '<img src="/images/guitare.png" class="Cv__image-guitare">'
+                images.innerHTML = '<img src="/images/YanisLegrand.jpg" class="Cv__image-me">'
 
                 itemsElement.append(itemElement)
         }
