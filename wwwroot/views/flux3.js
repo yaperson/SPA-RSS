@@ -1,4 +1,4 @@
-import InfoService from '/rss/ProgressiveWebApp.js'
+import InfoService from '/rss/PSA-jobs.js'
 
 export default class {
     async header() {

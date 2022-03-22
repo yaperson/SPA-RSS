@@ -1,17 +1,22 @@
 [
     {
-    "name": "Flux RSS",
-    "url": "https://veille-yanislegrand.alwaysdata.net/",
-    "progress":"88%"
+        "name": "Flux RSS",
+        "url": "https://veille-yanislegrand.alwaysdata.net/",
+        "progress": "87%"
     },
     {
-    "name": "WeekSong",
-    "url": "https://yaperson.alwaysdata.net/musique/",
-    "progress":"65%"
+        "name": "WeekSong",
+        "url": "https://yaperson.alwaysdata.net/musique/",
+        "progress": "65%"
     },
     {
-    "name": "NoteList",
-    "url": "/",
-    "progress":"13%"
+        "name": "NoteList",
+        "url": "https://github.com/yaperson/NoteListe",
+        "progress": "15%"
+    },
+    {
+        "name": "FeedBack - Self",
+        "url": "https://github.com/ndlaprovidence/self-feedback1",
+        "progress": "75%"
     }
 ]

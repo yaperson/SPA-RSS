@@ -9,18 +9,18 @@
     "fluxList": [
         {
             "id": "flux1",
+            "name": "Progressive Web App",
+            "description": "Une Progressive Web App, c’est un site web moderne qui a pris toutes les bonnes vitamines, et qui est installable comme une application sur le bureau ou l'ecran d'accueil d'un tellephone. Cette veille est en anglais afin d'avoir de meilleur résultats."
+        },
+        {
+            "id": "flux2",
             "name": "Defend intelligence",
             "description": "Une chaine youtuble sur l'intelligence artificielle. Ce n'est certe pas mon domaine mais les sujets sont super interessant et d'actualités. de plus, l'intelligence artificielle est partout et il est donc important de s'informé."
         },
         {
-            "id": "flux2",
-            "name": "Chromium blog",
-            "description": "Le blog de chromium, permet d'etre tenus au courant de ce qui se passe sur la plateforme, des nouvelles et futures mise a jours, ainsi que les fonctionnalitées et amélioration qui viennes avec. "
-        },
-        {
-        "id": "flux3",
-        "name": "Progressive Web App",
-        "description": "Une Progressive Web App, c’est un site web moderne qui a pris toutes les bonnes vitamines, et qui est installable comme une application sur le bureau ou l'ecran d'accueil d'un tellephone. Cette veille est en anglais afin d'avoir de meilleur résultats."
+            "id": "flux3",
+            "name": "Les offres d'emploi GROUPE PSA",
+            "description": "Pour m'aider dans ma recherche de contrat d'apprentissage ! (on sait jamais, il peut il y avoir quelque chose d'intéressant)"
         }
     ]
 }

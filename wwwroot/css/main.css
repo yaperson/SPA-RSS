@@ -91,7 +91,7 @@ h1{
 }
 .Skills__title {
   text-decoration: none;
-  color: black;
+  color: rgb(223, 100, 0);
   padding: 3px;
 }
 .Skills__title:active {

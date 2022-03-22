@@ -1,4 +1,4 @@
-import InfoService from '/rss/defend-intelligence.js'
+import InfoService from '/rss/ProgressiveWebApp.js'
 
 export default class {
     async header() {
@@ -29,11 +29,22 @@ export default class {
             itemLink.setAttribute('href', item.link)
             itemLink.classList.add('Post__description')
             
+            let itemDate = document.createElement('span')
+            itemDate.classList.add('Post__description')
+
+            let itemSource= document.createElement('span')
+            itemSource.classList.add('Post__description')
+
             itemElement.append(itemTitleElement)
             itemElement.append(itemLink)
+            itemElement.append(itemDate)
+            itemElement.append(itemSource)
 
+            let date = item.pubDate
             itemTitleElement.innerHTML = item.title || 'JavaScript'
-            itemLink.innerHTML = item.link || 'index.html'
+            itemLink.innerHTML = '<a>see more --></a>' || 'index.html'
+            itemDate.innerHTML =  date.slice(0,10) || '16/12/2002'
+            itemSource.innerHTML = item.content || 'Un vieux au bars !'
 
             itemsElement.append(itemElement)
         }
