@@ -17,7 +17,7 @@ app.listen(
     ()=>{
         // console.log(`Server is runing on http://${process.env.IP}:${process.env.PORT}`);
         // local values
-        console.log(`Server is runing on http://${host}:"5555"`);
+        console.log(`Server is runing on http://${host}:${port}`);
     }
 );
 

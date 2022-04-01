@@ -53,12 +53,15 @@ export default class {
 
     async footer() {
         let buttonSkillsElement = document.createElement('button')
+        buttonSkillsElement.setAttribute('aria-label','Skills')
         buttonSkillsElement.innerHTML='<img class="Nav__svg" src="/images/in-progress.svg"/>';
         
         let buttonHomeElement = document.createElement('button')
+        buttonSkillsElement.setAttribute('aria-label','Home')
         buttonHomeElement.innerHTML='<img class="Nav__svg" src="/images/home.svg"/>';
 
         let buttonCvElement = document.createElement('button')
+        buttonSkillsElement.setAttribute('aria-label','CV')
         buttonCvElement.innerHTML='<img class="Nav__svg" src="/images/cv.svg"/>';
 
         buttonSkillsElement.addEventListener('click', ()=>this.#buttonSkillsElement.call(this))
