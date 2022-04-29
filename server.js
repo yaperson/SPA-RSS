@@ -65,7 +65,7 @@ app.listen(
 
 //-- FLUX RSS N°3
 
-    const feed3 = await parser.parseURL("https://jobs.groupe-psa.com/handlers/offerRss.ashx?lcid=1036&Rss_JobFamily=1863&Rss_Country=79"); // stelantis jobs
+    const feed3 = await parser.parseURL("https://korben.info/feed"); // korben blog
     const fileName3 = `./wwwroot/data/${feed3.title.replace(/\s+/g, "-").replace(/[/\\?%*:|"<>]/g, '').toLowerCase()}.json`;
     let items3 = [];
 
