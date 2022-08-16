@@ -51,11 +51,35 @@ app.listen(
         }));
 
         fs.writeFileSync(fileName, JSON.stringify(items));
-        console.log(feed);
     }
     // const feed = await parser.parseURL(urls[i]); // PWA
 
 })();
+
+// app.get('/api/getFeed', function (req, res) {
+
+//     const mysql = require('mysql');
+//     const dbConfig = require("./config/db.config");
+
+//     const con = mysql.createConnection({
+//         host: dbConfig.HOST,
+//         user: dbConfig.USER,
+//         password: dbConfig.PASSWORD,
+//         database: dbConfig.DB
+//     });
+
+//     con.connect(function (err) {
+//         if (err) throw err;
+//         console.log("DB MySQL connected !");
+//         con.query("SELECT `rssFeed_name`, `rssFeed_link`, `rssFeed_description` FROM `RssFeed`", function (err, data) {
+//             if (err) {
+//                 console.log("error: ", err);
+//             }
+//             console.log("tutorials: ", data);
+//             res.send(data)
+//         });
+//     });
+// });
 
 function isEquivalent(a, b) {
     let aProps = Object.getOwnPropertyNames(a);
