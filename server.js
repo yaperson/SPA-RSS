@@ -27,8 +27,8 @@ app.listen(
 (async function main() {
 
     const urls = [
-        "https://www.google.fr/alerts/feeds/15619974748131115017/8380039576618842492", // Google -> PWA
-        "https://www.youtube.com/feeds/videos.xml?channel_id=UCnEHCrot2HkySxMTmDPhZyg", // youtube -> Defend Intelligence
+        "https://www.google.fr/alerts/feeds/15619974748131115017/8380039576618842492",  // PWA
+        "https://www.youtube.com/feeds/videos.xml?channel_id=UCnEHCrot2HkySxMTmDPhZyg", // Defend Intelligence
         "https://korben.info/feed" // korben blog
     ];
 
